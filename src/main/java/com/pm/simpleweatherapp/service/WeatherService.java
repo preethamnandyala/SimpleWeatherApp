@@ -28,7 +28,7 @@ public class WeatherService {
     public JsonNode getWeather(double latitude, double longitude) {
 
         String weatherUrl = String.format(
-                "http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
+                "http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s&units=metric",
                 latitude, longitude, apiKey
         );
 
