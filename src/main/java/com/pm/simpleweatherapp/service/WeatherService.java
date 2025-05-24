@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class WeatherService {
 
+
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
 
