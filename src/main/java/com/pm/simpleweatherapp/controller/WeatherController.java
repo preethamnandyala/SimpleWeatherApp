@@ -42,6 +42,9 @@ public class WeatherController {
             double longitude = locationJson.path("longitude").asDouble();
 
             JsonNode weatherJsonNode = weatherService.getWeather(latitude, longitude);
+
+            logger.info("Weather JSON: {}", weatherJsonNode.toPrettyString());
+
             double temperature = weatherJsonNode.path("main").path("temp").asDouble();
 
             WeatherDto weatherDto = WeatherDto.builder()
